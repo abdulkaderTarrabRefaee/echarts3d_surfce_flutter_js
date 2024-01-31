@@ -145,17 +145,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ''',
                 ),
               ),
-              TextButton(
-                style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-                ),
-                onPressed: () {
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 40, 0, 20),
 
-                  setState(() {
-                    getData1();
-                  });
-                },
-                child: Text('Get Data'),
+                child: TextButton(
+                  style: ButtonStyle(
+                    foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                  ),
+                  onPressed: () {
+
+                    setState(() {
+                      getData1();
+                    });
+                  },
+                  child: Container(color: Colors.black26,padding: const EdgeInsets.all(8.0) ,
+                      child: Text('Get Data',style: TextStyle(fontSize: 30),)),
+                ),
               )
 
             ],
